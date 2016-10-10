@@ -1,14 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.prady.wikivative.fragment.SearchFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.prady.wikivative.SearchFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <MultiAutoCompleteTextView
-        android:hint="Type your search"
-        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_weight="5"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/multiAutoCompleteTextView" />
-</FrameLayout>
+        android:hint="@string/search_hint"/>
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_search1"
+        android:onClick="onSearchButtonClicked"
+        android:contentDescription="@string/search_button_description"
+        android:background="@android:color/background_light" />
+</LinearLayout>
